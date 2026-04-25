@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Games</title>
+  <link rel="icon" type="image/icon" href="icon.png">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .block-heading {
+      display: centre;
+      padding: 10px 30px;
+      border-radius: 15px;
+      color: #000;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: colorShift 1s infinite alternate;
+    }
+
+    @keyframes colorShift {
+      0% { background: linear-gradient(135deg, #00fff7, #0055ff); }
+      100% { background: linear-gradient(135deg, #ff00cc, #3333ff); }
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .game-card {
+      position: relative;
+      background: #1c1c1c;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      overflow: hidden;
+      box-shadow: 0 0 10px #00fff7;
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .game-card h3 {
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    .play-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .game-card:hover .play-overlay {
+      opacity: 1;
+    }
+
+    .play-btn {
+      background: #00fff7;
+      border: none;
+      padding: 10px 25px;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+      transition: transform 0.3s ease;
+      animation: glowPulse 2s infinite;
+    }
+
+    .play-btn:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes glowPulse {
+      0%, 100% {
+        box-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+      }
+      50% {
+        box-shadow: 0 0 20px #00fff7, 0 0 30px #00fff7;
+      }
+    }
+
+    .footer-links {
+      background: #1c1c1c;
+      padding: 40px;
+      text-align: center;
+      color: #fff;
+      margin-top: 50px;
+    }
+    .footer-links h2 {
+      font-size: 1.5rem;
+      color: #00fff7;
+      margin-bottom: 20px;
+    }
+    .footer-links p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo animated-logo">
+        <span class="pro">Pro</span><span class="game">Game</span><span class="zone">Zone</span>
+      </a>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="all-games.html">All Games</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title block-heading">🎮 All Games</h1>
+
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="images/maxresdefault.jpg" alt="GTA 5" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>GTA 4</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/cod.jpg" alt="Call of Duty" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>Call of Duty</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/2077.jfif" alt="Cyber punk" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>Cyber punk</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/game15.jpg" alt="game1" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>game 1</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/game13.jpg" alt="game2" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>game 2</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/game12.jpg" alt="game3" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>game 3</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/game11.jpg" alt="game4" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>game 4</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/game10.jpg" alt="game5" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>game 5</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/game9.jpg" alt="game9" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>game 9</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/game8.jpg" alt="game8" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>game 8</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/game7.jpg" alt="game7" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>game 7</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/game6.jpg" alt="game6" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>game 6</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/game5.jfif" alt="game5" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>game 5</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/game4.jpg" alt="game4" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>game 4</h3>
+      </div>
+      <div class="game-card">
+        <img src="images/game12.jpg" alt="game3" />
+        <div class="play-overlay"><button class="play-btn">▶ Play</button></div>
+        <h3>game 3</h3>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h2>🔗 Our Other Links</h2>
+      <p>📱 Instagram:***games</p>
+      <p>🎥 YouTube: ****** Games</p>
+      <p>📧 Email: *******games@gmail.com</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ProGameZone. All rights reserved.</p>
+  </footer>
+</body>
+</html>
